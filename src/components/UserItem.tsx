@@ -11,7 +11,7 @@ export default function UserItem({ user }: { user: User }) {
 
   return (
     <div
-      className="max-w-sm px-4 py-6 transition duration-300 transform bg-white border rounded-lg shadow-lg cursor-pointer hover:scale-105"
+      className="min-w-[300px] lg:min-w-0 lg:max-w-sm px-4 py-6 transition duration-300 transform bg-white border rounded-lg shadow-lg cursor-pointer hover:scale-105"
       onClick={handleUserClick}
     >
       <div className="flex flex-col">
