@@ -11,18 +11,18 @@ export default function UserItem({ user }: { user: User }) {
 
   return (
     <div
-      className="max-w-sm p-6 transition duration-300 transform bg-white rounded shadow-lg cursor-pointer hover:scale-105"
+      className="max-w-sm p-6 transition duration-300 transform bg-white border rounded-lg shadow-lg cursor-pointer hover:scale-105"
       onClick={handleUserClick}
     >
-      <div className="mb-1 text-[15px] font-bold">{user.name}</div>
-      <div className="mb-2 text-xs text-gray-500">
+      <div className="text-[15px] font-bold">{user.name}</div>
+      <div className="mb-4 text-xs text-gray-500">
         <span>@{user.username}</span>
       </div>
-      <div className="mb-2 text-sm text-gray-700">
+      <div className="mb-3 text-sm text-gray-700">
         <p className="text-xs italic font-bold">Email:</p>
         <p>{user.email}</p>
       </div>
-      <div className="mb-2 text-sm text-gray-700">
+      <div className="mb-3 text-sm text-gray-700">
         <p className="text-xs italic font-bold">Phone:</p>
         <p>{user.phone}</p>
       </div>
@@ -32,6 +32,9 @@ export default function UserItem({ user }: { user: User }) {
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 hover:underline"
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
         >
           {user.website}
         </a>
