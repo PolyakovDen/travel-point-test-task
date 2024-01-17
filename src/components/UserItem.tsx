@@ -11,10 +11,17 @@ export default function UserItem({ user }: { user: User }) {
 
   return (
     <div
-      className="max-w-sm p-6 transition duration-300 transform bg-white border rounded-lg shadow-lg cursor-pointer hover:scale-105"
+      className="max-w-sm px-4 py-6 transition duration-300 transform bg-white border rounded-lg shadow-lg cursor-pointer hover:scale-105"
       onClick={handleUserClick}
     >
-      <div className="text-[15px] font-bold">{user.name}</div>
+      <div className="flex flex-col">
+        <img
+          src={`https://ui-avatars.com/api/?name=${user.name}&background=random`}
+          alt={user.name}
+          className="w-10 h-10 mb-2 rounded-full"
+        />
+        <p className="text-[15px] font-bold">{user.name}</p>
+      </div>
       <div className="mb-4 text-xs text-gray-500">
         <span>@{user.username}</span>
       </div>
