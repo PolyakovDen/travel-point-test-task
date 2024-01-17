@@ -1,8 +1,8 @@
-import CustomButton from "@/components/CustomButtom";
+import CustomButton from "@/components/CustomButton";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-describe("CustomButton", () => {
+describe("Custom Button Component", () => {
   it("renders button with correct title", () => {
     const title = "Click me";
     const { getByText } = render(

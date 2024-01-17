@@ -1,6 +1,6 @@
 import User from "@/types/User";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "./CustomButtom";
+import CustomButton from "./CustomButton";
 
 export default function UserItem({ user }: { user: User }) {
   const navigate = useNavigate();
